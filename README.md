@@ -28,7 +28,8 @@ Usually those are branches containing old merge requests.
 
 4. Execute:
 
-    for branch in `cat GIT_BRANCH_DELETE_branches_to_delete.txt |xargs -0`; do echo "About to delete $branch"; git push origin :$branch; done
+        for branch in `cat GIT_BRANCH_DELETE_branches_to_delete.txt |xargs -0`; do echo "About to delete $branch"; git push origin :$branch; done
+
 
 NOTE: `xargs -0` is required, because some branches can contain "'" character, e.g.: `this_branch_couldn't_be_removed`
 
